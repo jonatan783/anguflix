@@ -1,0 +1,39 @@
+.containerNavbar {
+    width: 100%;
+    height: 95px;
+    padding: 0 60px 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+
+
+    .containerSidebarIcon {
+        display: flex;
+
+        .iconMenu {
+            color: white;
+            font-size: 35px;
+            padding: 2px;
+            cursor:pointer;
+        }
+
+        .icon {
+            width: 120px;
+            height: 50px;
+            margin: 0 20px;
+            background-image: url(../../../assets/icons/iconAnguflix.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
+    .iconSearch {
+        color: white;
+        font-size: 35px;
+        padding: 2px;
+        cursor: pointer;
+    }
+}
