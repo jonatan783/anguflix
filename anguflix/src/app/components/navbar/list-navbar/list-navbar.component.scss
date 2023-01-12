@@ -1,4 +1,96 @@
 .containerListNavbar {
-    font-size: 20px;
-    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 100vh;
+    background: #191919;
+
+    .user {
+        padding: 20px;
+        border: solid black;
+        border-width: 0 0 2px 0;
+        display: flex;
+        align-items: center;
+
+        .userIcon {
+            width: 60px;
+            height: 60px;
+            background-image: url(../../../../assets/icons/imgUser.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:contain;
+        }
+
+        .name {
+            color: #dad9d9;
+            font-size: 23px;
+            font-weight: 400;
+            padding: 13px 20px;
+        }
+    }
+
+    .scrollbox {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 103px);
+
+        overflow: auto;
+        visibility: hidden;
+
+        .scrollbox-content {
+            .containerGender {
+                position: relative;
+                height: 51px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .gender {
+                    color: #bababa;
+                    font-size: 19px;
+                    font-weight: 300;
+                    padding: 0px 21px;
+                }
+
+                .selected {
+                    color: white !important;
+                    font-weight: 600 !important;
+                }
+
+                .selected::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: -webkit-fill-available;
+                    width: 5px;
+                    background-color: #e90514;
+                }
+            }
+
+            .containerGender:hover {
+                background: #333232;
+            }
+
+        }
+
+    }
+
+    .scrollbox-content,
+    .scrollbox:hover,
+    .scrollbox:focus {
+        visibility: visible;
+    }
+
+    .scrollbox_delayed {
+        transition: visibility 0.5s;
+    }
+
+    .scrollbox_delayed:hover {
+        transition: visibility 0s 0.2s;
+
+    }
+
+
 }

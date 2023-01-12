@@ -6,7 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
+    transition: 1s;
+    position: fixed;
+    top: 0;
 
 
     .containerSidebarIcon {
@@ -16,7 +18,7 @@
             color: white;
             font-size: 35px;
             padding: 2px;
-            cursor:pointer;
+            cursor: pointer;
         }
 
         .icon {
@@ -30,10 +32,32 @@
         }
     }
 
+    .aaaaaa {
+        width: 450px !important;
+        min-width: 450px !important;
+        max-width: 450px !important;
+    }
+
+    .mat-mdc-menu-panel.mat-mdc-menu-panel {
+        width: 450px !important;
+        min-width: 450px !important;
+        max-width: 450px !important;
+    }
+
     .iconSearch {
         color: white;
         font-size: 35px;
         padding: 2px;
         cursor: pointer;
     }
+}
+
+.transparentColor {
+    background-color: transparent !important;
+    transition: 1s;
+}
+
+.blackColor {
+    background-color: black;
+    transition: 1s;
 }

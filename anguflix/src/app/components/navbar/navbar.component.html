@@ -1,15 +1,31 @@
-<div class="containerNavbar">
+<some-element
+  class="containerNavbar blackColor"
+  (window:scroll)="doSomethingOnWindowScroll($event)"
+  [ngClass]="{ transparentColor: scrollPosition}"
+>
   <div class="containerSidebarIcon">
-    <mat-icon
-      class="iconMenu"
-      aria-hidden="false"
-      aria-label="icon menu"
-      fontIcon="dehaze"
-    ></mat-icon>
+    <div mat-button [matMenuTriggerFor]="menu">
+      <mat-icon
+        class="iconMenu"
+        aria-hidden="false"
+        aria-label="icon menu"
+        fontIcon="dehaze"
+      ></mat-icon>
+    </div>
     <div class="icon"></div>
   </div>
 
-  <app-list-navbar></app-list-navbar>
+  <mat-menu
+    #menu="matMenu"
+    class="aaaaaa"
+    hasBackdrop="true"
+    overlayPanelClass="aaaaaa"
+    backdropClass="aaaaaa"
+    overlapTrigger="true"
+    yPosition="above"
+  >
+    <app-list-navbar></app-list-navbar>
+  </mat-menu>
 
   <mat-icon
     class="iconSearch"
@@ -17,4 +33,4 @@
     aria-label="icon search"
     fontIcon="search"
   ></mat-icon>
-</div>
+</some-element>
