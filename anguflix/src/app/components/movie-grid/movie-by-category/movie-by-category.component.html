@@ -1,0 +1,38 @@
+<div class="containerMovies">
+  <span class="title">{{ movieByGenre.name }}</span>
+  <div class="container">
+    <div class="scrollMovies" id="{{ movieByGenre.name }}-list">
+      <ng-container *ngFor="let movie of movieByGenre.movie">
+        <img
+          class="movie"
+          alt="img-movie"
+          src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}"
+        />
+      </ng-container>
+      <ng-container *ngIf="buttonBack">
+        <div class="containerButtons buttonsBack">
+          <mat-icon
+            class="buttons"
+            aria-hidden="false"
+            aria-label="icon menu"
+            fontIcon="arrow_back_ios"
+            (click)="clickArrowBack(movieByGenre.name + '-list')"
+          >
+            ></mat-icon
+          >
+        </div>
+      </ng-container>
+      <ng-container *ngIf="buttonForward">
+        <div class="containerButtons buttonsForward">
+          <mat-icon
+            class="buttons"
+            aria-hidden="false"
+            aria-label="icon menu"
+            fontIcon="arrow_forward_ios"
+            (click)="clickArrowForward(movieByGenre.name + '-list')"
+          ></mat-icon>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

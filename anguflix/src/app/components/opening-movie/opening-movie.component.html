@@ -1,3 +1,35 @@
 <div class="containerOpeningMovie">
-  <img src="{{ urlImage1 }}" class="img"/>
+  <img src="{{ urlImage }}" class="img" />
+  <div class="container">
+    <span class="title">{{ title }}</span>
+    <div class="containerButtons">
+      <div class="buttonPlayConteiner">
+        <mat-icon
+          class="material-icons-round icons"
+          aria-hidden="false"
+          aria-label="play"
+          fontIcon="play_arrow"
+        >
+        </mat-icon>
+        <span class="button">Reproducir</span>
+      </div>
+
+      <div class="buttonAddConteiner">
+        <mat-icon
+          class="material-icons-round icons"
+          aria-hidden="false"
+          aria-label="add"
+          fontIcon="add"
+        >
+        </mat-icon>
+        <span class="button">Mi lista</span>
+      </div>
+    </div>
+    <p class="detail">
+      {{ overview }}
+    </p>
+    <div class="containerAge">
+      <div class="age">16+</div>
+    </div>
+  </div>
 </div>

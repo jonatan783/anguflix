@@ -1,7 +1,7 @@
 <some-element
   class="containerNavbar blackColor"
   (window:scroll)="doSomethingOnWindowScroll($event)"
-  [ngClass]="{ transparentColor: scrollPosition}"
+  [ngClass]="{ transparentColor: !scrollPosition}"
 >
   <div class="containerSidebarIcon">
     <div mat-button [matMenuTriggerFor]="menu">

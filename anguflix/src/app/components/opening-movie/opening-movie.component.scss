@@ -1,12 +1,118 @@
 .containerOpeningMovie {
-    //height: auto;
-    height: 1500px;
+    height: 100vh;
     width: 100%;
-    background-color: red;
-}
+    position: absolute;
 
-.img {
-    width: inherit;
-    height: max-content;
-    object-fit: contain;
+    .img {
+        width: inherit;
+        height: max-content;
+        object-fit: contain;
+        filter: brightness(75%);
+    }
+
+    .container {
+        position: absolute;
+        z-index:10;
+        top: calc(4vw + 100px);
+        left: 3.9vw;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        width: -webkit-fill-available;
+
+        .title {
+            font-size: 3.7em;
+            letter-spacing: -2px;
+            font-weight: 700;
+        }
+
+        .containerButtons {
+            margin-top: calc(160px + 2vw);
+            display: flex;
+
+            .buttonPlayConteiner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 2.9vw;
+                width: 12.5vw;
+                box-sizing: border-box;
+                background-color: rgb(0 0 0 / 19%);
+                border-radius: 0.2rem;
+                cursor: pointer;
+            }
+
+            .buttonAddConteiner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 2.9vw;
+                width: 10.5vw;
+                background-color: rgb(0 0 0 / 19%);
+                margin-left: 1.7rem;
+                border-radius: 0.2rem;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+
+            .button {
+                font-size: 1.2vw;
+                letter-spacing: -1px;
+                font-weight: 700;
+            }
+
+            .icons {
+                font-size: 2vw;
+                width: min-content;
+                height: min-content;
+                margin-right: 0.5rem;
+            }
+
+            .buttonPlayConteiner:hover {
+                background-color: rgb(221, 218, 218) !important;
+                color: black !important;
+                box-shadow: 0px 0px 20px 0px #0000006b;
+                transition: 0.5s;
+            }
+
+            .buttonAddConteiner:hover {
+                background-color: rgb(221, 218, 218) !important;
+                color: black !important;
+                box-shadow: 0px 0px 20px 0px #0000006b;
+                transition: 0.5s;
+            }
+
+        }
+
+        .detail {
+            margin: 2.1vw 0 0 0;
+            font-size: 1.3vw;
+            width: 40vw;
+            letter-spacing: -1px;
+            line-height: 2vw;
+        }
+
+        .containerAge {
+            position: absolute;
+            right: 0;
+            width: 5vw;
+            padding: 1vw;
+            background-color: rgb(0 0 0 / 19%);
+
+            .age {
+                font-size: 1.4vw;
+            }
+        }
+
+        .containerAge::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: white;
+            width: 0.4vw;
+            height: -webkit-fill-available;
+        }
+
+    }
+
 }

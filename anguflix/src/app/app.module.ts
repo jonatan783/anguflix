@@ -12,6 +12,7 @@ import { PlayMovieComponent } from './components/play-movie/play-movie.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieByCategoryComponent } from './components/movie-grid/movie-by-category/movie-by-category.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     SingleMovieComponent,
     PlayMovieComponent,
     ListNavbarComponent,
+    MovieByCategoryComponent
   ],
   imports: [
     BrowserModule,

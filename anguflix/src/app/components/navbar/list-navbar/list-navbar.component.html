@@ -5,15 +5,15 @@
   </div>
   <div class="scrollbox scrollbox_delayed">
     <div class="scrollbox-content">
-      <ng-container *ngFor="let gender of genders">
-        <ng-container *ngIf="gender == selected; else notSelected">
-          <div class="containerGender" (click)="fnSelected(gender)">
-            <span class="gender selected">{{ gender }}</span>
+      <ng-container *ngFor="let genre of genres">
+        <ng-container *ngIf="genre == selected; else notSelected">
+          <div class="containerGenre" (click)="fnSelected(genre)">
+            <span class="genre selected">{{ genre.name }}</span>
           </div>
         </ng-container>
         <ng-template #notSelected>
-          <div class="containerGender" (click)="fnSelected(gender)">
-            <span class="gender">{{ gender }}</span>
+          <div class="containerGenre" (click)="fnSelected(genre)">
+            <span class="genre">{{ genre.name }}</span>
           </div>
         </ng-template>
       </ng-container>

@@ -1,6 +1,6 @@
 .containerNavbar {
     width: 100%;
-    height: 95px;
+    height: 68px;
     padding: 0 60px 0 30px;
     box-sizing: border-box;
     display: flex;
@@ -9,6 +9,7 @@
     transition: 1s;
     position: fixed;
     top: 0;
+    z-index: 1000;
 
 
     .containerSidebarIcon {
@@ -16,8 +17,9 @@
 
         .iconMenu {
             color: white;
-            font-size: 35px;
-            padding: 2px;
+            font-size: 38px;
+            padding: 4px;
+            margin-top: 3px;
             cursor: pointer;
         }
 
@@ -46,8 +48,9 @@
 
     .iconSearch {
         color: white;
-        font-size: 35px;
-        padding: 2px;
+        font-size: 38px;
+        padding: 4px;
+        margin-bottom: 8px;
         cursor: pointer;
     }
 }

@@ -1,3 +1,13 @@
+export interface Movies {
+  page: number;
+  results: Movie[];
+  total_pages: number;
+  total_results: number;
+}
+export interface MoviesByGenre {
+  name: string;
+  movie: Movie[];
+}
 export interface Movie {
   adult: boolean;
   backdrop_path: string;

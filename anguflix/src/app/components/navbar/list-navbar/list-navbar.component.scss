@@ -5,6 +5,7 @@
     width: 340px;
     height: 100vh;
     background: #191919;
+    font-family: 'Poppins', sans-serif;
 
     .user {
         padding: 20px;
@@ -19,7 +20,7 @@
             background-image: url(../../../../assets/icons/imgUser.png);
             background-repeat: no-repeat;
             background-position: center;
-            background-size:contain;
+            background-size: contain;
         }
 
         .name {
@@ -39,14 +40,14 @@
         visibility: hidden;
 
         .scrollbox-content {
-            .containerGender {
+            .containerGenre {
                 position: relative;
                 height: 51px;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
 
-                .gender {
+                .genre {
                     color: #bababa;
                     font-size: 19px;
                     font-weight: 300;
