@@ -1,1 +1,52 @@
-<p>single-movie works!</p>
+<div class="containerSingleMovie">
+  <div class="container">
+    <div class="containerImg">
+      <img
+        class="img"
+        alt="single image"
+        src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}"
+      />
+      <mat-icon
+        class="iconPlay"
+        aria-hidden="false"
+        aria-label="icon search"
+        fontIcon="play_arrow"
+        (click)="fnPlayMovie()"
+      >
+      </mat-icon>
+    </div>
+
+    <div class="shadow"></div>
+
+    <div class="dataMovie">
+      <span class="title">{{ movie.title }}</span>
+
+      <div class="dataLine">
+        <span class="vote"
+          >{{ (movie.vote_average * 10).toFixed(0) }}% para ti</span
+        >
+        <span class="release">{{ movie.release_date.substring(0, 4) }}</span>
+        <span class="adult">{{ movie.adult ? "13+" : "18+" }}</span>
+        <span class="time"
+          >{{ (movie.runtime / 60).toFixed(0) }}h
+          {{ movie.runtime % 60 }}min</span
+        >
+        <span class="audio">hd</span>
+        <span class="audio">5.1</span>
+      </div>
+
+      <p class="overview">{{ movie.overview }}</p>
+    </div>
+    <div class="suggestedMovies">
+      <ng-container *ngFor="let movieSimilar of movie.similar.results">
+        <img
+          class="imageSimilar"
+          alt="movie similar"
+          src="https://image.tmdb.org/t/p/original/{{
+            movieSimilar.backdrop_path
+          }}"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,14 @@
-<app-navbar></app-navbar>
-<app-opening-movie></app-opening-movie>
-<app-movie-grid></app-movie-grid>
+<some-element [ngClass]="{ display: state }">
+  <app-navbar></app-navbar>
+  <ng-container *ngIf="stateSearch ; else home">
+    <app-search-by-category></app-search-by-category>
+  </ng-container>
+  <ng-template #home>
+    <app-opening-movie></app-opening-movie>
+    <app-movie-grid></app-movie-grid>
+  </ng-template>
+</some-element>
+
+<some-element [ngClass]="{ display: !state }">
+  <app-play-movie></app-play-movie>
+</some-element>

@@ -1,10 +1,10 @@
 <some-element
   class="containerNavbar blackColor"
   (window:scroll)="doSomethingOnWindowScroll($event)"
-  [ngClass]="{ transparentColor: !scrollPosition}"
+  [ngClass]="{ transparentColor: !scrollPosition }"
 >
   <div class="containerSidebarIcon">
-    <div mat-button [matMenuTriggerFor]="menu">
+    <div mat-button [matMenuTriggerFor]="sidebar">
       <mat-icon
         class="iconMenu"
         aria-hidden="false"
@@ -16,21 +16,29 @@
   </div>
 
   <mat-menu
-    #menu="matMenu"
-    class="aaaaaa"
+    class="containerListNavbarr"
+    #sidebar="matMenu"
     hasBackdrop="true"
-    overlayPanelClass="aaaaaa"
-    backdropClass="aaaaaa"
     overlapTrigger="true"
     yPosition="above"
   >
-    <app-list-navbar></app-list-navbar>
+    <app-list-navbar class="containerListNavbarr"></app-list-navbar>
   </mat-menu>
-
+<div class="containerButtIn">
   <mat-icon
     class="iconSearch"
     aria-hidden="false"
     aria-label="icon search"
     fontIcon="search"
+    (click)="fnInputState()"
   ></mat-icon>
+
+  <some-element class="containerInput" [ngClass]="{ inputShow: inputState }">
+    <input 
+    [formControl]="search"
+    class="input"
+    />
+  </some-element>
+</div>
+  
 </some-element>

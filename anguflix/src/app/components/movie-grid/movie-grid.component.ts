@@ -27,7 +27,7 @@ export class MovieGridComponent implements OnInit {
           this.genres = genres.genres;
           this.genres.forEach((genre) => {
             this.moviesByGenreService
-              .getMoviesbyGenre(genre.id)
+              .getMoviesbyGenre(genre.id,1)
               .pipe(
                 tap(({ results }) => {
                   moviesByGenresLoop.push({

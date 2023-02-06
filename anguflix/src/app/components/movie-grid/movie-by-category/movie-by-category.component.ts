@@ -8,6 +8,7 @@ import { MoviesByGenre } from 'src/app/interfaces/movie.interface';
 })
 export class MovieByCategoryComponent implements OnInit {
   @Input() movieByGenre!: MoviesByGenre;
+  
   constructor() {}
 
   ngOnInit(): void {}

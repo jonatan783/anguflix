@@ -34,26 +34,11 @@
         }
     }
 
-    .aaaaaa {
-        width: 450px !important;
-        min-width: 450px !important;
-        max-width: 450px !important;
-    }
 
-    .mat-mdc-menu-panel.mat-mdc-menu-panel {
-        width: 450px !important;
-        min-width: 450px !important;
-        max-width: 450px !important;
-    }
 
-    .iconSearch {
-        color: white;
-        font-size: 38px;
-        padding: 4px;
-        margin-bottom: 8px;
-        cursor: pointer;
-    }
+
 }
+
 
 .transparentColor {
     background-color: transparent !important;
@@ -63,4 +48,71 @@
 .blackColor {
     background-color: black;
     transition: 1s;
+}
+
+.containerListNavbarr {
+    width: 450px !important;
+    min-width: 450px !important;
+    max-width: 450px !important;
+    height: 100vw;
+}
+
+.mat-mdc-menu-panel.mdc-menu-surface {
+    min-width: 340px !important;
+    max-width: 340px !important;
+    width: 340px;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0 !important;
+}
+
+.containerButtIn {
+    display: flex;
+    align-items: center;
+
+    .iconSearch {
+        color: white;
+        font-size: 38px;
+        padding: 4px;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+    .containerInput {
+        width: max-content;
+        transition: 1s;
+    }
+
+    .input {
+        background-color: rgba(0, 0, 0, 0);
+        max-width: 0px;
+        transition: 1s;
+        margin: 0 0 0 8px;
+        width: 380px;
+        height: 28px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 19px;
+        font-weight: 300;
+        border: none;
+    }
+
+    .inputShow {
+        .input {
+            max-width: 500px;
+            transition: 1s;
+            margin-right: 40vw;
+            border: 2px solid #666666;
+            background-color: black;
+        }
+    }
+}
+
+.input:focus-visible {
+    outline: none;
+}
+
+.input:focus {
+
+    border: 2px solid #29bccc;
 }

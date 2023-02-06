@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { MoviesService } from 'src/app/services/movies.service';
+import { PlayMovieService } from 'src/app/services/playMovie.service';
 
 @Component({
   selector: 'app-opening-movie',
@@ -8,12 +9,15 @@ import { MoviesService } from 'src/app/services/movies.service';
   styleUrls: ['./opening-movie.component.scss'],
 })
 export class OpeningMovieComponent implements OnInit {
-  constructor(private moviesService: MoviesService) {}
+  constructor(
+    private moviesService: MoviesService,
+    private playMovieService: PlayMovieService
+  ) {}
 
   urlImage: string = 'https://image.tmdb.org/t/p/original/';
   title!: string;
   overview!: string;
-  
+
   ngOnInit(): void {
     this.moviesService
       .getMovies()
@@ -31,5 +35,9 @@ export class OpeningMovieComponent implements OnInit {
         })
       )
       .subscribe();
+  }
+
+  fnPlayMovie():void{
+    this.playMovieService.play()
   }
 }

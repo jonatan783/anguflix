@@ -4,10 +4,16 @@
     <div class="scrollMovies" id="{{ movieByGenre.name }}-list">
       <ng-container *ngFor="let movie of movieByGenre.movie">
         <img
+          mat-button
+          [matMenuTriggerFor]="singleMovie"
           class="movie"
           alt="img-movie"
           src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}"
         />
+
+        <mat-menu #singleMovie="matMenu">
+          <app-single-movie [movieId]="movie.id"></app-single-movie>
+        </mat-menu>
       </ng-container>
       <ng-container *ngIf="buttonBack">
         <div class="containerButtons buttonsBack">

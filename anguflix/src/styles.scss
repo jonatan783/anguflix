@@ -14,12 +14,26 @@ body {
     left: 0 !important;
 }
 
-.mat-mdc-menu-panel.mat-mdc-menu-panel.mdc-menu-surface {
-    width: 340px !important;
-    min-width: 340px !important;
-    max-width: 340px !important;
-    width: 340px;
-    height: 100vh;
-    max-height: 100vh;
+.cdk-overlay-connected-position-bounding-box {
+    left: 0;
+    top: 0;
+}
+
+.mat-mdc-menu-panel.mdc-menu-surface {
+    min-width: max-content !important;
+    max-width: max-content !important;
+    height: max-content;
+    max-height: max-content;
     border-radius: 0 !important;
+    background-color: transparent !important;
+}
+
+.mat-mdc-menu-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle,
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+   
+    stroke: red !important;
 }

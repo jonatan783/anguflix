@@ -1,0 +1,15 @@
+.container {
+    padding-top:68px;
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    background-color: black;
+
+    .image {
+        width: 20%;
+        object-fit: cover;
+        padding: 1px 4px;
+        box-sizing: border-box;
+        min-width: 20%;
+    }
+}

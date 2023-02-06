@@ -1,0 +1,9 @@
+<div class="container">
+    <ng-container *ngFor="let movie of movies">
+        <img
+        alt="image"
+        class="image"
+        src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path}}"
+        />
+    </ng-container>
+</div>

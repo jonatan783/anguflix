@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -13,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieByCategoryComponent } from './components/movie-grid/movie-by-category/movie-by-category.component';
+import { SearchByCategoryComponent } from './components/search-by-category/search-by-category.component'; 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -23,14 +25,16 @@ import { MovieByCategoryComponent } from './components/movie-grid/movie-by-categ
     SingleMovieComponent,
     PlayMovieComponent,
     ListNavbarComponent,
-    MovieByCategoryComponent
+    MovieByCategoryComponent,
+    SearchByCategoryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

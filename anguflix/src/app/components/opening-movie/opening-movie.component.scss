@@ -13,7 +13,7 @@
     .container {
         position: absolute;
         z-index:10;
-        top: calc(4vw + 100px);
+        top: calc(9.5vw);
         left: 3.9vw;
         font-family: 'Poppins', sans-serif;
         color: white;
@@ -26,7 +26,7 @@
         }
 
         .containerButtons {
-            margin-top: calc(160px + 2vw);
+            margin-top: calc(12vw);
             display: flex;
 
             .buttonPlayConteiner {

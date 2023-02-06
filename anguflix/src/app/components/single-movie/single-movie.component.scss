@@ -1,0 +1,129 @@
+.containerSingleMovie {
+    width: 99vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.777);
+
+    .container {
+        width: 810px;
+        height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        background: #191919;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .containerImg {
+            position: relative;
+            width: inherit;
+
+            .img {
+                width: inherit;
+                filter: brightness(0.8);
+                cursor: pointer;
+            }
+
+            .iconPlay {
+                color: rgb(255 255 255 / 54%);
+                width: min-content;
+                height: min-content;
+                position: absolute;
+                top: 42%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 45px;
+                padding: 2px;
+                cursor: pointer;
+                border: 2px solid rgba(255, 255, 255, 54%);
+                border-radius: 50%;
+                background: #19191975;
+            }
+        }
+
+
+
+        .shadow {
+            position: absolute;
+            z-index: 192;
+            box-shadow: inset 0px -73px 37px -22px #191919;
+            height: 128px;
+            top: 331px;
+            width: 810px;
+        }
+
+
+        .dataMovie {
+            position: absolute;
+            top: 350px;
+            z-index: 1000;
+            margin: 0 60px;
+            font-family: "Poppins", sans-serif;
+            color: #eeecec;
+            font-weight: 100;
+
+            .title {
+                font-size: 36px;
+                font-weight: 600;
+                color: #ffffff !important;
+            }
+
+            .dataLine {
+                margin-top: 21px;
+
+                .vote {
+                    color: #46d369;
+                    font-weight: 600;
+                    margin-right: 16px;
+                }
+
+                .release {
+                    font-weight: 300;
+                    margin-right: 16px;
+                }
+
+                .adult {
+                    font-weight: 200;
+                    margin-right: 16px;
+                    border: solid 1px #eeecec;
+                    padding: 3px 7px;
+                    border-radius: 4px;
+                }
+
+                .time {
+                    margin-right: 21px;
+                }
+
+                .hd {
+                    margin-right: 21px;
+                }
+
+                .audio {
+                    margin-right: 21px;
+                    text-transform: uppercase;
+                    background: #555555;
+                    font-weight: 600;
+                    border-radius: 2px;
+                    padding: 3px 9px;
+                }
+            }
+
+            .overview {
+                margin-top: 25px;
+            }
+        }
+
+    }
+
+    .suggestedMovies {
+        width: initial;
+        height: min-content;
+        margin: 130px 60px 0;
+
+        .imageSimilar {
+            width: 50%;
+            padding: 3px 9px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+    }
+
+}

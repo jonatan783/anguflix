@@ -9,10 +9,10 @@ import { Movies } from '../interfaces/movie.interface';
 export class MoviesByGenreService {
   constructor(private http: HttpClient) {}
 
-  private apiUrl = (id: number): string =>
-    `https://api.themoviedb.org/3/discover/movie?api_key=f6c22acfbb5aac96138bfd137d4aac0b&language=es-ES&with_genres=${id}`;
+  private apiUrl = (id: number, page: number): string =>
+    `https://api.themoviedb.org/3/discover/movie?api_key=f6c22acfbb5aac96138bfd137d4aac0b&language=es-ES&with_genres=${id}&page=${page}`;
 
-  getMoviesbyGenre(idGenre: number): Observable<Movies> {
-    return this.http.get<Movies>(this.apiUrl(idGenre));
+  getMoviesbyGenre(idGenre: number, page: number): Observable<Movies> {
+    return this.http.get<Movies>(this.apiUrl(idGenre, page));
   }
 }
